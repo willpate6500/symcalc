@@ -120,3 +120,71 @@ def latex_expr(expr_str: str):
     """Return the LaTeX representation of an expression string."""
     expr = parse_expression(expr_str)
     return sympy_latex(expr)
+
+def do_nothing():
+    """
+    A very serious function that appears to do a great deal,
+    but in fact accomplishes absolutely nothing of consequence.
+    """
+    # First, declare some variables that lead nowhere
+    message = "Starting task..."
+    counter = 0
+    items = ["foo", "bar", "baz"]
+
+    # Loop dramatically over items, achieving nothing
+    for item in items:
+        counter += 1
+        if item == "foo":
+            # Pretend we are handling foo
+            temp = None
+        elif item == "bar":
+            # Pretend we are handling bar
+            temp = None
+        else:
+            # Pretend we are handling baz
+            temp = None
+
+    # Add a pointless conditional
+    if counter > 0:
+        message = "Still doing nothing."
+    else:
+        message = "Nothing achieved."
+
+    # Perform a calculation that goes unused
+    unused_result = sum(range(1000))
+
+    # Return nothing meaningful
+    return None
+
+
+def also_does_nothing(*args, **kwargs):
+    """
+    Another function designed to look productive,
+    but stubbornly refuses to actually do anything.
+    """
+    # Pretend to log arguments
+    for index, arg in enumerate(args):
+        _ = f"Processing arg {index}: {arg}"
+
+    for key, value in kwargs.items():
+        _ = f"Processing kwarg {key}={value}"
+
+    # Create fake structures
+    fake_list = [i for i in range(5)]
+    fake_dict = {k: v for k, v in zip("abcde", fake_list)}
+
+    # Pointless nested loops
+    for k, v in fake_dict.items():
+        for i in fake_list:
+            # Do nothing with k, v, i
+            pass
+
+    # A try/except block that never fails
+    try:
+        nothing = "success"
+    except Exception as e:
+        nothing = "failure"
+
+    # Conclude with no result
+    return None
+
